@@ -1,0 +1,328 @@
+{
+  "versjon": 1,
+  "hash": "1721d9f5ad63621b",
+  "stemme": "nb-NO-Chirp3-HD-Algieba",
+  "tempo": 1.1,
+  "lyd": "titanic-1721d9f5ad63621b.mp3",
+  "varighet": 344.187,
+  "laget": "2026-10-09T12:55:19+00:00",
+  "kontrollert": true,
+  "replikker": [
+    {
+      "tekst": "Det er natt, den fjortende april 1912. Vi er midt ute på Atlanterhavet.",
+      "start": 0.0,
+      "slutt": 4.429
+    },
+    {
+      "tekst": "Havet ligger helt blankt, og lufta er iskald. Her seiler det største skipet verden har sett.",
+      "start": 4.779,
+      "slutt": 10.713
+    },
+    {
+      "tekst": "Klokka tjue på tolv roper utkikken i masta: Isfjell rett forut!",
+      "start": 11.063,
+      "slutt": 14.882
+    },
+    {
+      "tekst": "Skipet svinger, men det er for sent. Isen skraper langs siden av skroget.",
+      "start": 15.232,
+      "slutt": 20.413
+    },
+    {
+      "tekst": "Mange om bord merker nesten ingenting. Noen tror det bare var en liten dult. Men skipet har fått et sår det ikke kan overleve.",
+      "start": 20.763,
+      "slutt": 28.878
+    },
+    {
+      "tekst": "Skipet het Titanic.",
+      "start": 29.978,
+      "slutt": 31.427
+    },
+    {
+      "tekst": "Det var på sin aller første tur, fra England til New York.",
+      "start": 31.777,
+      "slutt": 34.543
+    },
+    {
+      "tekst": "Mindre enn tre timer etter smellet var skipet borte. Rundt 1500 mennesker døde, og rundt 700 ble reddet.",
+      "start": 34.893,
+      "slutt": 42.165
+    },
+    {
+      "tekst": "I denne filmen skal vi finne ut hvorfor så mange døde, og hvorfor det ikke var tilfeldig hvem som overlevde.",
+      "start": 42.515,
+      "slutt": 47.341
+    },
+    {
+      "tekst": "Titanic ble bygd i Belfast og var 269 meter langt.",
+      "start": 48.441,
+      "slutt": 51.645
+    },
+    {
+      "tekst": "Det er nesten like langt som tre fotballbaner etter hverandre.",
+      "start": 51.995,
+      "slutt": 54.745
+    },
+    {
+      "tekst": "Det var plass til 2435 passasjerer. I tillegg var det rundt 900 i mannskapet.",
+      "start": 55.095,
+      "slutt": 60.635
+    },
+    {
+      "tekst": "Store dampmaskiner, drevet av kull, fikk det enorme skipet til å gå.",
+      "start": 60.985,
+      "slutt": 64.951
+    },
+    {
+      "tekst": "Om bord var skipet delt i tre klasser, nesten som tre etasjer i samfunnet.",
+      "start": 66.051,
+      "slutt": 69.725
+    },
+    {
+      "tekst": "I første klasse reiste noen av de rikeste menneskene i verden. De bodde i store, flotte lugarer høyt oppe i skipet.",
+      "start": 70.075,
+      "slutt": 75.693
+    },
+    {
+      "tekst": "I andre klasse reiste folk med vanlige, gode inntekter.",
+      "start": 76.043,
+      "slutt": 78.83
+    },
+    {
+      "tekst": "Langt nede i skipet reiste tredje klasse. Det var de som hadde minst penger. Mange var utvandrere på vei til et nytt liv i Amerika.",
+      "start": 79.18,
+      "slutt": 86.989
+    },
+    {
+      "tekst": "Også nordmenn var med. 31 av passasjerene var født i Norge.",
+      "start": 88.089,
+      "slutt": 92.165
+    },
+    {
+      "tekst": "De fleste av dem reiste på tredje klasse. De var en del av den store utvandringen, da hundretusenvis av nordmenn reiste til Amerika for å finne arbeid og jord.",
+      "start": 92.515,
+      "slutt": 100.303
+    },
+    {
+      "tekst": "Hvorfor trodde så mange at Titanic ikke kunne synke? Svaret ligger i hvordan skipet var bygd.",
+      "start": 101.403,
+      "slutt": 106.535
+    },
+    {
+      "tekst": "Skroget var delt inn i 16 rom, med vanntette vegger mellom.",
+      "start": 106.885,
+      "slutt": 110.345
+    },
+    {
+      "tekst": "Verftet regnet med at fire av rommene kunne fylles med vann uten at skipet sank.",
+      "start": 110.695,
+      "slutt": 114.645
+    },
+    {
+      "tekst": "Men det var en svakhet. Veggene mellom rommene gikk ikke helt opp til taket.",
+      "start": 114.995,
+      "slutt": 119.676
+    },
+    {
+      "tekst": "Isfjellet hadde laget hull i seks rom. Det var flere enn skipet tålte.",
+      "start": 120.026,
+      "slutt": 124.405
+    },
+    {
+      "tekst": "Baugen sank dypere. Da rant vannet over veggene, akkurat som i en isbitform du vipper på. Rom etter rom ble fylt.",
+      "start": 124.755,
+      "slutt": 132.117
+    },
+    {
+      "tekst": "Nå kommer den viktigste delen av historien.",
+      "start": 133.216,
+      "slutt": 135.441
+    },
+    {
+      "tekst": "Titanic hadde 20 livbåter. Til sammen var det plass til 1178 personer.",
+      "start": 135.791,
+      "slutt": 140.964
+    },
+    {
+      "tekst": "Men om bord var det rundt 2200 mennesker.",
+      "start": 141.314,
+      "slutt": 143.834
+    },
+    {
+      "tekst": "Selv om hver eneste plass ble brukt, ville nesten halvparten ikke fått plass.",
+      "start": 144.184,
+      "slutt": 147.777
+    },
+    {
+      "tekst": "Det er som en skolebuss med seter til bare halve klassen. På en tur der setet er det eneste som kan redde deg.",
+      "start": 148.127,
+      "slutt": 154.082
+    },
+    {
+      "tekst": "Og det ble enda verre. Mange av livbåtene ble sendt ned på vannet halvtomme.",
+      "start": 155.182,
+      "slutt": 160.335
+    },
+    {
+      "tekst": "Den første livbåten hadde plass til 65. Bare 28 satt i den.",
+      "start": 160.685,
+      "slutt": 164.968
+    },
+    {
+      "tekst": "En annen båt med plass til 40 fikk bare med seg 12 mennesker.",
+      "start": 165.318,
+      "slutt": 168.241
+    },
+    {
+      "tekst": "Skipet var stort, varmt og opplyst. Ville du gått ned i en liten båt på det svarte, iskalde havet?",
+      "start": 168.591,
+      "slutt": 175.308
+    },
+    {
+      "tekst": "Da folk forsto at skipet faktisk sank, var mange av båtene allerede borte.",
+      "start": 176.408,
+      "slutt": 180.545
+    },
+    {
+      "tekst": "Telegrafistene sendte ut nødsignaler med radio. Radio var helt ny teknologi i 1912.",
+      "start": 180.895,
+      "slutt": 186.133
+    },
+    {
+      "tekst": "Klokka tjue over to om natta, to timer og førti minutter etter smellet, forsvant Titanic under overflaten.",
+      "start": 186.483,
+      "slutt": 191.993
+    },
+    {
+      "tekst": "De som havnet i det iskalde vannet, hadde nesten ingen sjanse.",
+      "start": 192.343,
+      "slutt": 195.247
+    },
+    {
+      "tekst": "Skipet Carpathia fanget opp nødsignalene og satte kursen mot ulykkesstedet.",
+      "start": 196.347,
+      "slutt": 200.099
+    },
+    {
+      "tekst": "Men det tok lang tid. Carpathia begynte å plukke opp folk fra livbåtene klokka ti over fire.",
+      "start": 200.449,
+      "slutt": 206.088
+    },
+    {
+      "tekst": "Det var nesten to timer etter at Titanic hadde sunket. Redningen var ferdig klokka halv ni om morgenen.",
+      "start": 206.438,
+      "slutt": 211.062
+    },
+    {
+      "tekst": "Derfor er livbåtene nøkkelen til hele historien. Den som fikk plass i en båt, overlevde. Den som ikke fikk det, døde nesten alltid.",
+      "start": 211.412,
+      "slutt": 220.376
+    },
+    {
+      "tekst": "Etter ulykken undersøkte britiske myndigheter nøye hva som hadde skjedd. De telte hvor mange som ble reddet i hver klasse.",
+      "start": 221.476,
+      "slutt": 228.161
+    },
+    {
+      "tekst": "I første klasse ble 202 av 322 reddet. Det er nesten to av tre.",
+      "start": 228.511,
+      "slutt": 233.9
+    },
+    {
+      "tekst": "I andre klasse ble 115 av 277 reddet.",
+      "start": 234.25,
+      "slutt": 237.722
+    },
+    {
+      "tekst": "I tredje klasse ble bare 176 av 709 reddet. Det er én av fire.",
+      "start": 238.072,
+      "slutt": 244.529
+    },
+    {
+      "tekst": "Av mannskapet ble 210 av 898 reddet.",
+      "start": 244.879,
+      "slutt": 247.94
+    },
+    {
+      "tekst": "Kvinner og barn fikk gå i båtene først. Nesten alle kvinnene i første klasse overlevde, 139 av 144. Men av mennene i tredje klasse overlevde bare 55 av 454.",
+      "start": 248.29,
+      "slutt": 261.2
+    },
+    {
+      "tekst": "Og de norske passasjerene? Av de 31 overlevde 10. 21 omkom.",
+      "start": 262.3,
+      "slutt": 266.562
+    },
+    {
+      "tekst": "Hvor du sov på skipet, og hvor mye billetten din kostet, hadde altså mye å si for om du levde neste morgen.",
+      "start": 266.912,
+      "slutt": 271.795
+    },
+    {
+      "tekst": "Ulykken sjokkerte hele verden. Svaret ble nye regler.",
+      "start": 272.895,
+      "slutt": 276.672
+    },
+    {
+      "tekst": "Alle passasjerskip måtte ha livbåter med plass til alle om bord.",
+      "start": 277.022,
+      "slutt": 280.019
+    },
+    {
+      "tekst": "Radioen skulle være bemannet hele døgnet, så ingen nødsignaler ble oversett.",
+      "start": 280.369,
+      "slutt": 284.103
+    },
+    {
+      "tekst": "En egen ispatrulje skulle holde øye med isfjell i Atlanterhavet.",
+      "start": 284.453,
+      "slutt": 287.697
+    },
+    {
+      "tekst": "I 1914 ble land enige om en avtale om sikkerhet til sjøs. Den heter SOLAS, og den gjelder fortsatt i dag.",
+      "start": 288.047,
+      "slutt": 294.487
+    },
+    {
+      "tekst": "Så hver gang du tar en ferje, er det plass til deg i en livbåt. Delvis på grunn av Titanic.",
+      "start": 294.837,
+      "slutt": 300.467
+    },
+    {
+      "tekst": "Vraket av Titanic ble funnet i 1985, på 3800 meters dyp.",
+      "start": 301.567,
+      "slutt": 306.022
+    },
+    {
+      "tekst": "Tenk deg at du setter Galdhøpiggen, Norges høyeste fjell, på havbunnen. Toppen ville fortsatt vært over tusen meter under vannet.",
+      "start": 306.372,
+      "slutt": 312.786
+    },
+    {
+      "tekst": "Der nede ligger fortsatt restene av skipet som ikke kunne synke.",
+      "start": 313.136,
+      "slutt": 316.041
+    },
+    {
+      "tekst": "Titanic var noe av det mest moderne folk hadde bygd. Likevel hadde ingen sørget for at alle fikk plass i livbåtene.",
+      "start": 317.141,
+      "slutt": 323.413
+    },
+    {
+      "tekst": "Lærdommen gjelder fortsatt: Ny teknologi gjør oss ikke trygge hvis vi slutter å spørre: Hva om det verste skjer?",
+      "start": 323.763,
+      "slutt": 330.016
+    },
+    {
+      "tekst": "Ulykken viser også hvor mye klassesamfunnet betydde. Alle om bord møtte det samme isfjellet og det samme kalde havet.",
+      "start": 330.366,
+      "slutt": 336.857
+    },
+    {
+      "tekst": "Likevel var det ikke bare flaks som avgjorde hvem som levde. Det var regler, plassering og penger.",
+      "start": 337.207,
+      "slutt": 343.087
+    }
+  ],
+  "avvik": []
+}

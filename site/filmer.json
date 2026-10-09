@@ -1,0 +1,24 @@
+{
+  "filmer": {
+    "historie/andre-verdenskrig/brenningen-av-finnmark": {
+      "varighet": 417.379,
+      "laget": "2026-10-09T12:59:07+00:00",
+      "avvik": 0
+    },
+    "historie/industriell-revolusjon/titanic": {
+      "varighet": 344.187,
+      "laget": "2026-10-09T12:55:19+00:00",
+      "avvik": 0
+    },
+    "historie/lov-og-rett/den-engelske-borgerkrigen": {
+      "varighet": 418.824,
+      "laget": "2026-10-09T13:02:35+00:00",
+      "avvik": 0
+    },
+    "historie/norge-i-moderne-tid/embetsmannsstaten": {
+      "varighet": 411.067,
+      "laget": "2026-10-09T13:05:42+00:00",
+      "avvik": 0
+    }
+  }
+}

@@ -1,0 +1,11 @@
+/*
+  Access-Control-Allow-Origin: *
+
+/film/*.json
+  Cache-Control: public, max-age=300
+
+/film/*.mp3
+  Cache-Control: public, max-age=31536000, immutable
+
+/filmer.json
+  Cache-Control: public, max-age=300

@@ -1,0 +1,6 @@
+numpy
+faster-whisper
+huggingface_hub
+jiwer
+num2words
+imageio-ffmpeg

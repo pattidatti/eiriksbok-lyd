@@ -1,0 +1,127 @@
+name: Lag filmlyd
+
+# Ser etter nye eller endrede filmmanus i Eiriksbok hver time, lager fortellerstemmen
+# (lag_lyd.py) og publiserer site/ til Cloudflare Pages. Uten nye manus tar en kjøring
+# under ett minutt og gjør ingenting.
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+    inputs:
+      film:
+        description: 'Bare denne filmen (f.eks. historie/industriell-revolusjon/titanic)'
+        required: false
+      tving:
+        description: 'Lag på nytt selv om lyden er oppdatert'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+
+concurrency:
+  group: lag-lyd
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+env:
+  GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  PROSJEKT: eiriksbok-lyd
+
+jobs:
+  lag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Hent filmmanusene fra Eiriksbok
+        uses: actions/checkout@v5
+        with:
+          repository: pattidatti/Eiriksbok
+          path: eiriksbok
+          sparse-checkout: src/features/film/manus
+          sparse-checkout-cone-mode: true
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Hva mangler lyd?
+        id: telle
+        run: |
+          ARGS="--manus eiriksbok/src/features/film/manus"
+          [ -n "${{ inputs.film }}" ] && ARGS="$ARGS --film ${{ inputs.film }}"
+          [ "${{ inputs.tving }}" = "true" ] && ARGS="$ARGS --tving"
+          echo "args=$ARGS" >> "$GITHUB_OUTPUT"
+          echo "mangler=$(python lag_lyd.py $ARGS --bare-telle)" >> "$GITHUB_OUTPUT"
+
+      - name: Mangler Google-nøkkel
+        if: steps.telle.outputs.mangler != '0' && env.GOOGLE_TTS_KEY == ''
+        run: echo "::warning::${{ steps.telle.outputs.mangler }} filmer mangler lyd, men hemmeligheten GOOGLE_TTS_KEY er ikke satt."
+
+      - name: Installer
+        if: steps.telle.outputs.mangler != '0' && env.GOOGLE_TTS_KEY != ''
+        run: pip install -r requirements.txt
+
+      - name: Whisper-modellen (cache)
+        if: steps.telle.outputs.mangler != '0' && env.GOOGLE_TTS_KEY != ''
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: nb-whisper-medium-ct2
+
+      - name: Lag lyd
+        if: steps.telle.outputs.mangler != '0' && env.GOOGLE_TTS_KEY != ''
+        run: python lag_lyd.py ${{ steps.telle.outputs.args }} | { grep -vE '^  [0-9]+/[0-9]+$' || true; } | tee logg.txt
+
+      - name: Lagre
+        # Også når jobben feilet midt i: filmene som ble ferdige, er hele og skal ikke kastes.
+        if: success() || failure()
+        run: |
+          git config user.name "eiriksbok-lyd"
+          git config user.email "eiriksbok-lyd@users.noreply.github.com"
+          git add site kvote.json
+          if ! git diff --cached --quiet; then
+            git commit -m "lyd: $(git diff --cached --name-only -- 'site/film/*.json' | sed 's|site/film/||; s|\.json$||' | paste -sd ', ' -)"
+            git push
+          fi
+
+      - name: Meld avvik
+        if: always() && hashFiles('logg.txt') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if grep -q 'AVVIK\|[1-9][0-9]* avvik\|STOPP' logg.txt; then
+            gh issue create --title "Filmlyd $(date -u +%F): avvik eller stopp" \
+              --body "Whisper hørte noe annet enn manuset i noen replikker, eller kvoten stoppet jobben. Se \`avvik\` i json-filene under site/film/ og lytt.
+
+          \`\`\`
+          $(cat logg.txt)
+          \`\`\`"
+          fi
+
+      - name: Publiser til Cloudflare Pages
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
+        run: |
+          TRE=$(git rev-parse HEAD:site)
+          if [ "$TRE" = "$(cat .sist-publisert 2>/dev/null)" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            echo "site/ er uendret siden forrige publisering."
+            exit 0
+          fi
+          npx --yes wrangler@4 pages project create "$PROSJEKT" --production-branch main 2>/dev/null || true
+          npx --yes wrangler@4 pages deploy site --project-name "$PROSJEKT" --branch main --commit-dirty=true
+          echo "$TRE" > .sist-publisert
+          git add .sist-publisert
+          git commit -m "publisert til Cloudflare Pages" && git push
+
+      - name: Mangler Cloudflare-nøkler
+        if: env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == ''
+        run: echo "::warning::CLOUDFLARE_API_TOKEN eller CLOUDFLARE_ACCOUNT_ID er ikke satt. Lyden er lagret i repoet, men ikke publisert."
